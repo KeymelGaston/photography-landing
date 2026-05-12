@@ -1,17 +1,138 @@
 ---
-
+import Layout from '../layouts/Layout.astro';
+import Navbar from '../components/Navbar.astro';
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="icon" href="/favicon.ico" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<Layout>
+  <Navbar />
+
+  <!-- Hero -->
+  <section id="hero" class="relative h-screen w-full flex items-center justify-center bg-black overflow-hidden">
+    <div class="absolute inset-0 bg-black opacity-60 z-10"></div>
+    <img 
+      src="https://images.unsplash.com/photo-1452587925148-ce544e77e70d?w=1600&q=80" 
+      alt="Hero background"
+      class="absolute inset-0 w-full h-full object-cover"
+    />
+    <div class="relative z-20 text-center text-white px-6">
+      <p class="text-sm uppercase tracking-[0.3em] text-gray-300 mb-4">Photography Agency</p>
+      <h1 class="text-6xl md:text-8xl font-bold mb-6">Luminary Studio</h1>
+      <p class="text-xl md:text-2xl text-gray-300 italic mb-10">We don't take photos. We capture light.</p>
+      <a href="#services" class="border border-white text-white px-8 py-3 uppercase tracking-widest text-sm hover:bg-white hover:text-black transition-all duration-300">
+        Explore
+      </a>
+    </div>
+  </section>
+
+  <!-- Services -->
+  <section id="services" class="bg-black text-white py-32 px-6">
+    <div class="max-w-6xl mx-auto">
+      <p class="text-sm uppercase tracking-[0.3em] text-gray-400 mb-4">What We Do</p>
+      <h2 class="text-5xl font-bold mb-20">Our Services</h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+        <div class="border-t border-gray-700 pt-8">
+          <span class="text-gray-500 text-sm tracking-widest">01</span>
+          <h3 class="text-2xl font-semibold mt-4 mb-4">Wedding Photography</h3>
+          <p class="text-gray-400 leading-relaxed">We capture every emotion, every glance, every moment that makes your day unforgettable.</p>
+        </div>
+        <div class="border-t border-gray-700 pt-8">
+          <span class="text-gray-500 text-sm tracking-widest">02</span>
+          <h3 class="text-2xl font-semibold mt-4 mb-4">Portrait Sessions</h3>
+          <p class="text-gray-400 leading-relaxed">From personal branding to fine art portraits — we bring out the story behind every face.</p>
+        </div>
+        <div class="border-t border-gray-700 pt-8">
+          <span class="text-gray-500 text-sm tracking-widest">03</span>
+          <h3 class="text-2xl font-semibold mt-4 mb-4">Commercial Work</h3>
+          <p class="text-gray-400 leading-relaxed">Product shoots, editorial campaigns, and brand visuals crafted to convert and impress.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Gallery -->
+  <section id="gallery" class="bg-black text-white py-32 px-6">
+    <div class="max-w-6xl mx-auto">
+      <p class="text-sm uppercase tracking-[0.3em] text-gray-400 mb-4">Our Work</p>
+      <h2 class="text-5xl font-bold mb-20">Selected Work</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+        <img src="https://images.unsplash.com/photo-1519741497674-611481863552?w=800&q=80" alt="Wedding" class="w-full h-72 object-cover grayscale hover:grayscale-0 transition-all duration-500" />
+        <img src="https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?w=800&q=80" alt="Portrait" class="w-full h-72 object-cover grayscale hover:grayscale-0 transition-all duration-500" />
+        <img src="https://images.unsplash.com/photo-1504257432389-52343af06ae3?w=800&q=80" alt="Commercial" class="w-full h-72 object-cover grayscale hover:grayscale-0 transition-all duration-500" />
+        <img src="https://images.unsplash.com/photo-1460978812857-470ed1c77af0?w=800&q=80" alt="Nature" class="w-full h-72 object-cover grayscale hover:grayscale-0 transition-all duration-500" />
+        <img src="https://images.unsplash.com/photo-1516035069371-29a1b244cc32?w=800&q=80" alt="Camera" class="w-full h-72 object-cover grayscale hover:grayscale-0 transition-all duration-500" />
+        <img src="https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?w=800&q=80" alt="Landscape" class="w-full h-72 object-cover grayscale hover:grayscale-0 transition-all duration-500" />
+      </div>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section id="about" class="bg-zinc-950 text-white py-32 px-6">
+    <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
+      <img 
+        src="https://images.unsplash.com/photo-1554048612-b6a482bc67e5?w=800&q=80" 
+        alt="About Luminary Studio"
+        class="w-full h-[500px] object-cover"
+      />
+      <div>
+        <p class="text-sm uppercase tracking-[0.3em] text-gray-400 mb-4">Who We Are</p>
+        <h2 class="text-5xl font-bold mb-8">Light is our language.</h2>
+        <p class="text-gray-400 leading-relaxed mb-6">
+          Luminary Studio was born from a simple obsession — the way light transforms the ordinary into something eternal. Founded in 2018, we've built a reputation for images that don't just document moments, but define them.
+        </p>
+        <p class="text-gray-400 leading-relaxed">
+          Our team works across weddings, portraits, and commercial projects with one constant: an uncompromising eye for detail and a deep respect for the stories we're trusted to tell.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials -->
+  <section id="testimonials" class="bg-black text-white py-32 px-6">
+    <div class="max-w-6xl mx-auto">
+      <p class="text-sm uppercase tracking-[0.3em] text-gray-400 mb-4">Kind Words</p>
+      <h2 class="text-5xl font-bold mb-20">What Clients Say</h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+        <div class="border-t border-gray-700 pt-8">
+          <p class="text-gray-300 leading-relaxed mb-8">"Luminary Studio captured our wedding in a way we never imagined possible. Every photo tells a story we'll treasure forever."</p>
+          <span class="text-sm uppercase tracking-widest text-gray-500">— Sofia & Marcus</span>
+        </div>
+        <div class="border-t border-gray-700 pt-8">
+          <p class="text-gray-300 leading-relaxed mb-8">"Our brand campaign exceeded every expectation. The team has an incredible eye and made the entire process effortless."</p>
+          <span class="text-sm uppercase tracking-widest text-gray-500">— Aria Collective</span>
+        </div>
+        <div class="border-t border-gray-700 pt-8">
+          <p class="text-gray-300 leading-relaxed mb-8">"My portrait session was an experience in itself. I've never felt more confident in front of a camera — or loved photos of myself more."</p>
+          <span class="text-sm uppercase tracking-widest text-gray-500">— James R.</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="bg-zinc-950 text-white py-32 px-6">
+    <div class="max-w-3xl mx-auto text-center">
+      <p class="text-sm uppercase tracking-[0.3em] text-gray-400 mb-4">Get In Touch</p>
+      <h2 class="text-5xl font-bold mb-8">Let's create something together.</h2>
+      <p class="text-gray-400 leading-relaxed mb-12">Whether you have a project in mind or just want to talk, we'd love to hear from you.</p>
+      <a 
+        href="mailto:hello@luminarystudio.com" 
+        class="border border-white text-white px-10 py-4 uppercase tracking-widest text-sm hover:bg-white hover:text-black transition-all duration-300"
+      >
+        hello@luminarystudio.com
+      </a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-black text-gray-600 py-8 px-6 text-center text-sm tracking-widest uppercase">
+    © 2026 Luminary Studio — All Rights Reserved
+  </footer>
+
+
+
+
+
+<script>
+  import '../scripts/animations.js';
+</script>
+</Layout>
